@@ -1,0 +1,151 @@
+:root {
+  --color-primary: #007aff;           
+  --color-white: #ffffff;             
+  --color-surface: #f2f2f7;           
+  --color-black: #1c1c1e;             
+  --color-gray: #8e8e93;              
+  --color-border: #adadae;            
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:"Segoe UI";
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.menu_bar {
+  background-color: var(--color-white);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menu_bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu_bar ul li {
+  padding: 10px 30px;
+  position: relative;
+}
+
+.menu_bar ul li a {
+  color: var(--color-black);
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
+}
+
+.menu_bar ul li a:hover {
+  color: var(--color-primary);
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--color-surface);
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1000;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.dropdown_menu ul {
+  display: block;
+  flex-direction: column;
+}
+
+.dropdown_menu ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.dropdown_menu ul li:last-child {
+  border-bottom: none;
+}
+
+.dropdown_menu ul li a {
+  font-size: 18px;
+  color: var(--color-black);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown_menu ul li a:hover {
+  color: var(--color-primary);
+}
+
+
+.menu_bar ul li:hover .dropdown_menu {
+  display: block;
+}
+
+.fas {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+  color: var(--color-gray);
+}
+
+.dropdown_menu_right {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: var(--color-surface);
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1001;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.dropdown_menu_right ul {
+  display: block;
+  flex-direction: column;
+}
+
+.dropdown_menu_right ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dropdown_menu_right ul li:last-child {
+  border-bottom: none;
+}
+
+.dropdown_menu_right ul li a {
+  font-size: 18px;
+  color: var(--color-black);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown_menu_right ul li a:hover {
+  color: var(--color-primary);
+}
+
+.dropdown_menu ul li:hover .dropdown_menu_right {
+  display: block;
+}
